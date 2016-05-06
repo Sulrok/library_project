@@ -11,21 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160506151720) do
-
-  create_table "members", force: :cascade do |t|
-    t.string   "userName"
-    t.string   "password_digest"
-    t.string   "name"
-    t.string   "surrName"
-    t.string   "email"
-    t.string   "addr1"
-    t.string   "addr2"
-    t.string   "tel"
-    t.boolean  "isActive"
-    t.boolean  "isAdmin"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
