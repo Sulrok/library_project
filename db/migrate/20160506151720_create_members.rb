@@ -12,6 +12,7 @@ class CreateMembers < ActiveRecord::Migration
       t.boolean :isActive
       t.boolean :isAdmin
 
+
       t.timestamps null: false
     end
   end
