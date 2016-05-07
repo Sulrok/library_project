@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get  'home' => 'static_pages#home'
   get  'about' => 'static_pages#about'
   get  'contact' => 'static_pages#contact'
+  get   'members' => 'member#show'
   get    'signup'  => 'members#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
