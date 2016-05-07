@@ -6,13 +6,13 @@
   <thead>
     <tr>
       <th>Username</th>
-      <th>Password digest</th>
-      <th>Name</th>
-      <th>Surrname</th>
+      <!--<th>Password digest</th>-->
+      <!--<th>Name</th>-->
+      <!--<th>Surrname</th>-->
       <th>Email</th>
-      <th>Addr1</th>
-      <th>Addr2</th>
-      <th>Tel</th>
+      <!--<th>Addr1</th>-->
+      <!--<th>Addr2</th>-->
+      <!--<th>Tel</th>-->
       <th>Isactive</th>
       <th>Isadmin</th>
       <th colspan="3"></th>
@@ -23,13 +23,13 @@
     <% @members.each do |member| %>
       <tr>
         <td><%= member.userName %></td>
-        <td><%= member.password_digest %></td>
-        <td><%= member.name %></td>
-        <td><%= member.surrName %></td>
+        <!--<td><%= member.password_digest %></td>-->
+        <!--<td><%= member.name %></td>-->
+        <!--<td><%= member.surrName %></td>-->
         <td><%= member.email %></td>
-        <td><%= member.addr1 %></td>
-        <td><%= member.addr2 %></td>
-        <td><%= member.tel %></td>
+        <!--<td><%= member.addr1 %></td>-->
+        <!--<td><%= member.addr2 %></td>-->
+        <!--<td><%= member.tel %></td>-->
         <td><%= member.isActive %></td>
         <td><%= member.isAdmin %></td>
         <td><%= link_to 'Show', member %></td>
