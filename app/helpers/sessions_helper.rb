@@ -13,4 +13,9 @@ module SessionsHelper
     def logged_in?
     !current_member.nil?
   end
+  
+  def log_out
+    session.delete(:member_id)
+    @current_member = nil
+  end
 end
