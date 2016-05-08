@@ -18,9 +18,42 @@ Member.create!(name:  "Admin",
              isAdmin: true)
              
 
+Member.create!(name:  "Member1",
+             userName: "Member1",
+             surrName: "One",
+             addr1: "member one road",
+             addr2: "member one city",
+             tel: "1234567890",
+             email: "member1@one.com",
+             password:              "member1",
+             password_confirmation: "member1",
+             isAdmin: false)
+
+Member.create!(name:  "Member2",
+             userName: "Member2",
+             surrName: "Two",
+             addr1: "member two road",
+             addr2: "member two city",
+             tel: "1234567890",
+             email: "member2@two.com",
+             password:              "member2",
+             password_confirmation: "member2",
+             isAdmin: false)
+
+Member.create!(name:  "Member3",
+             userName: "Member3",
+             surrName: "Three",
+             addr1: "member three road",
+             addr2: "member three city",
+             tel: "1234567890",
+             email: "member3@three.com",
+             password:              "member3",
+             password_confirmation: "member3",
+             isAdmin: false)
+
 Book.create!(title: "Horus Rising",
             isbn: "400",
-            bookID: 4,
+            bookID: 1,
             description: "the seeds of Heresy are sown",
             author: "Dan Abnett",
             isAvailable: 0)
@@ -28,7 +61,7 @@ Book.create!(title: "Horus Rising",
 
 Book.create!(title: "False Gods",
             isbn: "412",
-            bookID: 5,
+            bookID: 2,
             description: "The Heresy takes root",
             author: "Graham McNeill",
             isAvailable: 0)
@@ -36,7 +69,22 @@ Book.create!(title: "False Gods",
 
 Book.create!(title: "Galaxy in Flames",
             isbn: "415",
-            bookID: 6,
+            bookID: 3,
             description: "The Heresy revealed",
             author: "Ben Counter",
-            isAvailable: 0)
+            isAvailable: -1)
+
+
+Book.create!(title: "The Flight of the Eisenstein",
+            isbn: "407",
+            bookID: 4,
+            description: "The Heresy unfolds",
+            author: "James Swallow",
+            isAvailable: 1)
+            
+Book.create!(title: "Fulgrim",
+            isbn: "510",
+            bookID: 5,
+            description: "Visions of treachery",
+            author: "Graham McNeill",
+            isAvailable: -1)
