@@ -20,5 +20,6 @@ when running the server on cloud9 with "rails s -b $IP -p $PORT"
 the project is working
 
 when using a deployment from heroku there seams to be an error when accessing the database, heroku is not capable of acessing our tables
+It's seems to come from pg (postgres), use while passing on production (guess)
 
 Enjoy =)
