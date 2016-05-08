@@ -16,4 +16,8 @@ class Member < ActiveRecord::Base
                                                   BCrypt::Engine.cost
         BCrypt::Password.create(string, cost: cost)
      end
+     
+     def self.to_int(string)
+          string.split(',').map(&:to_i)
+     end
 end
