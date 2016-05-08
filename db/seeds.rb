@@ -16,3 +16,11 @@ Member.create!(name:  "Admin",
              password:              "adminadmin",
              password_confirmation: "adminadmin",
              isAdmin: true)
+             
+
+Book.create!(title: "Horus Rising",
+            isbn: "412",
+            bookID: 4,
+            description: "the seeds of Heresy are sown",
+            author: "Dan Abnett",
+            isAvailable: 0)
