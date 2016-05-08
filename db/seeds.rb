@@ -15,6 +15,7 @@ Member.create!(name:  "Admin",
              email: "admin@admin.com",
              password:              "adminadmin",
              password_confirmation: "adminadmin",
+             isActive: true,
              isAdmin: true)
              
 
@@ -27,6 +28,7 @@ Member.create!(name:  "Member1",
              email: "member1@one.com",
              password:              "member1",
              password_confirmation: "member1",
+             isActive: true,
              isAdmin: false)
 
 Member.create!(name:  "Member2",
@@ -38,6 +40,7 @@ Member.create!(name:  "Member2",
              email: "member2@two.com",
              password:              "member2",
              password_confirmation: "member2",
+             isActive: false,
              isAdmin: false)
 
 Member.create!(name:  "Member3",
@@ -49,6 +52,7 @@ Member.create!(name:  "Member3",
              email: "member3@three.com",
              password:              "member3",
              password_confirmation: "member3",
+             isActive: true,
              isAdmin: false)
 
 Book.create!(title: "Horus Rising",
