@@ -35,8 +35,8 @@
             </ul>
           </li>
         <% else %>
-          <li><%= button_to "Sign in", login_path, class: "btn btn-default navbar-btn", type:"button" %></li>
-          <li><%= button_to "Sign up now!", signup_path, class: "btn btn-default navbar-btn", type:"button"%></li>
+          <li><%= link_to "Sign in", login_path, class: "btn btn-default navbar-btn", type:"button" %></li>
+          <li><%= link_to "Sign up now!", signup_path, class: "btn btn-default navbar-btn", type:"button"%></li>
         <% end %>
         </ul>
       </div>
