@@ -1,28 +1,16 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+web framework final project
 
-Things you may want to cover:
+Authors: Guillaume Gratigny 2899801 and Romain Bonnot 2899579
 
-* Ruby version
+run "rake db:seed" to seed the database
 
-* System dependencies
+there will be an account Admin with login information:
+email: "admin@admin.com"
+password: "adminadmin"
 
-* Configuration
+And will be 3 users and 5 books
+to find the login informations of the members just look at the file app/db/seed.rb
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Enjoy =)
