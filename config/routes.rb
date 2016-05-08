@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get  'about' => 'static_pages#about'
   get  'contact' => 'static_pages#contact'
   get  'list' =>  'books#list'
+  get   'detail' => 'books#detail'
   get   'members' => 'member#show'
   get    'signup'  => 'members#new'
   get    'login'   => 'sessions#new'

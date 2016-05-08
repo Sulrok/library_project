@@ -1,8 +1,5 @@
 <% provide(:title, "Home") %>
 
-<p id="notice"><%= notice %></p>
-
-
 <%= form_tag(list_path, :method => "get", id: "search-form") do %>
 <%= text_field_tag :search, params[:search], placeholder: "Search Books" %>
 <%= submit_tag "Search" %>
@@ -22,18 +19,20 @@
         <th>Author</th>
       </tr>
     <% @books.each do |book| %>
+     <% if book.isAvailable == 1 %>
       <tr>
         <td><%= book.bookID %></td>
         <td><%= book.title %></td>
         <td><%= book.isbn %></td>
         <td><%= book.description %></td>
         <td><%= book.author %></td>
+        <td><%= link_to 'Show', detail_path %></td>
       </tr>
+      <% end %>
     <% end %>
     </table>
     </div>
 </div>
-
 
 <div class="col-md-2">
     <div class="jumbotron">

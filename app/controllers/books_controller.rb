@@ -28,7 +28,12 @@ class BooksController < ApplicationController
     else
       @books = Book.all.order('created_at DESC')
     end
-
+  end
+  
+  # GET /books/1
+  # GET /books/1.json
+  def detail
+    @book = Book.find(params[:bookID])
   end
   
   # POST /books
