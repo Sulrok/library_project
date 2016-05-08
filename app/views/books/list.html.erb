@@ -26,7 +26,7 @@
         <td><%= book.isbn %></td>
         <td><%= book.description %></td>
         <td><%= book.author %></td>
-        <td><%= link_to 'Show', detail_path %></td>
+        <td><%= link_to 'Show', detail_path(:id => book.id) %></td>
       </tr>
       <% end %>
     <% end %>
