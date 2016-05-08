@@ -1,5 +1,29 @@
-<h1>New Book</h1>
+<% provide(:title, 'Add book') %>
+<h1>new book</h1>
 
-<%= render 'form' %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@book) do |f| %>
+      <%= f.label :bookID %>
+      <%= f.number_field :bookID %>
 
+<<<<<<< HEAD
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :isbn %>
+      <%= f.text_field :isbn %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+      <%= f.label :author %>
+      <%= f.text_field :author %>
+      
+      <%= f.submit "Add a book", class: "btn btn-primary" %>
+<% end %>
+  </div>
+</div>
+=======
 <%= link_to 'Back', books_path %>
+>>>>>>> e041d9cfb118993a90d628ce3ca0dcd5c5fd663b
