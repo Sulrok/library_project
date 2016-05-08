@@ -1,0 +1,31 @@
+<p>
+  <strong>Bookid:</strong>
+  <%= @book.id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @book.isbn %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Disponibility:</strong>
+  <%= get_book_stat(@book.isAvailable) %>
+</p>
+
+<%= link_to 'Back', list_path %>
