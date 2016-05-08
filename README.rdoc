@@ -16,4 +16,9 @@ to find the login informations of the members just look at the file app/db/seed.
 link to the github:
 https://github.com/Sulrok/library_project
 
+when running the server on cloud9 with "rails s -b $IP -p $PORT"
+the project is working
+
+when using a deployment from heroku there seams to be an error when accessing the database, heroku is not capable of acessing our tables
+
 Enjoy =)
