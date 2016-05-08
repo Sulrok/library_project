@@ -29,9 +29,6 @@
         <td><%= get_book_stat(book.isAvailable) %></td>
         
         <td><%= link_to 'Show', detail_path(:id => book.id) %></td>
-        <% if logged_in? and current_member.isAdmin?  %>
-        <%= link_to 'Edit', edit_book_path(@book) %>
-        <% end  %>
       </tr>
     <% end %>
     </table>
