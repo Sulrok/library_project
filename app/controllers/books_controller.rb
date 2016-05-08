@@ -26,7 +26,7 @@ class BooksController < ApplicationController
     if params[:search]
       @books = @books.search(params[:search]).order("created_at DESC")
     else
-      @books = Book.all.order('created_at DESC')
+      @books = Book.all.order('created_at ASC')
     end
   end
   
