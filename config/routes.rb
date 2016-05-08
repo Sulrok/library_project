@@ -3,10 +3,11 @@ Rails.application.routes.draw do
 
   resources :books
   resources :members
-  root 'static_pages#home'
-  get  'home' => 'static_pages#home'
+  root 'books#list'
+  get  'home' => 'books#list'
   get  'about' => 'static_pages#about'
   get  'contact' => 'static_pages#contact'
+  get  'list' =>  'books#list'
   get   'members' => 'member#show'
   get    'signup'  => 'members#new'
   get    'login'   => 'sessions#new'

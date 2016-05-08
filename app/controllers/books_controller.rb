@@ -20,6 +20,11 @@ class BooksController < ApplicationController
   # GET /books/1/edit
   def edit
   end
+  
+  # GET /books.json
+  def list
+    @books = Book.all
+  end
 
   # POST /books
   # POST /books.json

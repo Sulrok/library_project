@@ -1,0 +1,28 @@
+<% provide(:title, "Home") %>
+
+<p id="notice"><%= notice %></p>
+
+<div class="col-md-10">
+    <h1>Listing Books</h1>
+ 
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Summary</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+      </tr>
+    <% end %>
+    </table>
+</div>
+<div class="col-md-2">
+    <div class="jumbotron">
+            <%= link_to "Members List",   members_path %>
+    </div>
+</div>
+
