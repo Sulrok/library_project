@@ -24,8 +24,14 @@ class BooksController < ApplicationController
   # GET /books.json
   def list
     @books = Book.all
-  end
+    if params[:search]
+      @books = @books.search(params[:search]).order("created_at DESC")
+    else
+      @books = Book.all.order('created_at DESC')
+    end
 
+  end
+  
   # POST /books
   # POST /books.json
   def create
