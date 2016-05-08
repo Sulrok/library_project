@@ -17,7 +17,7 @@ class Member < ActiveRecord::Base
         BCrypt::Password.create(string, cost: cost)
      end
      
-     def self.to_int(string)
-          string.split(',').map(&:to_i)
+     def self.mapping(string)
+          string.split(',')
      end
 end

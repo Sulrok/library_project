@@ -23,6 +23,13 @@ class MembersController < ApplicationController
   def edit
   end
 
+  def booklist
+    @member = Member.find(params[:id])
+    if @member.booklist
+      @list = @member.booklist.split(',')
+    end
+  end
+
   def loan
     @book = Book.find(params[:id])
     @members = Member.all
@@ -34,11 +41,11 @@ class MembersController < ApplicationController
     @book.isAvailable = 1
     @book.save
     if @member.booklist
-      @str = @member.booklist
-      @str.concat(',')
-      @str.concat(@book.id)
+      @member.booklist = @member.booklist + "," + @book.id.to_s
+      @member.save
     else
-      @str = @book.id
+      @member.booklist = @book.id.to_s
+      @member.save
     end
     respond_to do |format|
       format.html { redirect_to list_path, notice: 'Book has been loan' }
