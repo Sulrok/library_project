@@ -32,6 +32,7 @@ class MembersController < ApplicationController
       if @member.save
         format.html { redirect_to list_path, notice: 'Member was successfully created.' }
         format.json { render :show, status: :created, location: @member }
+        log_in @member
       else
         format.html { render :new }
         format.json { render json: list_paht.errors, status: :unprocessable_entity }
