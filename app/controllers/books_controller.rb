@@ -20,7 +20,17 @@ class BooksController < ApplicationController
   # GET /books/1/edit
   def edit
   end
+  
+  def list
+    @books = Book.all
+    if params[:search]
+      @books = @books.search(params[:search]).order("created_at DESC")
+    else
+      @books = Book.all.order('created_at DESC')
+    end
 
+  end
+  
   # POST /books
   # POST /books.json
   def create
