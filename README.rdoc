@@ -13,4 +13,7 @@ password: "adminadmin"
 And will be 3 users and 5 books
 to find the login informations of the members just look at the file app/db/seed.rb
 
+link to the github:
+https://github.com/Sulrok/library_project
+
 Enjoy =)
