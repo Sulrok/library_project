@@ -21,8 +21,6 @@ class BooksController < ApplicationController
   def edit
   end
   
-  # GET /books
-  # GET /books.json
   def list
     @books = Book.all
     if params[:search]
