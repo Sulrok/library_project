@@ -1,5 +1,6 @@
 class MembersController < ApplicationController
   before_action :set_member, only: [:show, :edit, :update, :destroy]
+  before_filter :skip_password_attribute, only: :update
 
   # GET /members
   # GET /members.json
@@ -71,5 +72,11 @@ class MembersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def member_params
       params.require(:member).permit(:userName, :password, :password_confirmation, :name, :surrName, :email, :addr1, :addr2, :tel)
+    end
+    
+    def skip_password_attribute
+      if params[:password].blank? && params[:password_validation].blank?
+        params.except!(:password, :password_validation)
+      end
     end
 end

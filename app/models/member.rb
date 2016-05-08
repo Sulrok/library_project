@@ -9,11 +9,11 @@ class Member < ActiveRecord::Base
     validates :tel,  presence: true, length: { maximum: 14, minimum: 10 }
     validates :userName,  presence: true, length: { maximum: 50, minimum: 5 }
     has_secure_password
-    validates :password,  presence: true, length: { minimum: 6 }
+    validates :password,  presence: true, length: { minimum: 6 }, :on => :create
     
      def Member.digest(string)
-    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+        cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost
-    BCrypt::Password.create(string, cost: cost)
-  end
+        BCrypt::Password.create(string, cost: cost)
+     end
 end
