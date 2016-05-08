@@ -31,6 +31,9 @@
         <td><%= link_to 'Show', detail_path(:id => book.id) %></td>
         <% if logged_in? and current_member.isAdmin? %>
           <td><%= link_to 'Edit', edit_book_path(book) %></td>
+          <% if book.isAvailable == 0%>
+            <td><%= link_to 'Loan Book', loan_path(:id => book.id) %></td>
+          <% end %>
         <% end %>
       </tr>
     <% end %>

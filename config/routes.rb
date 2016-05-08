@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get  'list' =>  'books#list'
   get   'detail' => 'books#detail'
   get   'members' => 'member#show'
+  get   'loan' => 'members#loan'
   get    'signup'  => 'members#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'

@@ -23,6 +23,11 @@ class MembersController < ApplicationController
   def edit
   end
 
+  def loan
+    @book = Book.find(params[:id])
+    @members = Member.all
+  end
+
   # POST /members
   # POST /members.json
   def create
