@@ -1,6 +1,6 @@
 <p>
   <strong>Bookid:</strong>
-  <%= @book.bookID %>
+  <%= @book.id %>
 </p>
 
 <p>
@@ -24,8 +24,8 @@
 </p>
 
 <p>
-  <strong>Isavailable:</strong>
-  <%= @book.isAvailable %>
+  <strong>Disponibility:</strong>
+  <%= get_book_stat(@book.isAvailable) %>
 </p>
 
 <%= link_to 'Back', list_path %>
