@@ -19,8 +19,24 @@ Member.create!(name:  "Admin",
              
 
 Book.create!(title: "Horus Rising",
-            isbn: "412",
+            isbn: "400",
             bookID: 4,
             description: "the seeds of Heresy are sown",
             author: "Dan Abnett",
+            isAvailable: 0)
+            
+
+Book.create!(title: "False Gods",
+            isbn: "412",
+            bookID: 5,
+            description: "The Heresy takes root",
+            author: "Graham McNeill",
+            isAvailable: 0)
+            
+
+Book.create!(title: "Galaxy in Flames",
+            isbn: "415",
+            bookID: 6,
+            description: "The Heresy revealed",
+            author: "Ben Counter",
             isAvailable: 0)
