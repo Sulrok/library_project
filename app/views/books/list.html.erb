@@ -29,15 +29,24 @@
         <td><%= get_book_stat(book.isAvailable) %></td>
         
         <td><%= link_to 'Show', detail_path(:id => book.id) %></td>
+        <% if logged_in? and current_member.isAdmin? %>
+          <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <% end %>
       </tr>
     <% end %>
     </table>
     </div>
+    <% if logged_in? and current_member.isAdmin? %>
+      <%= link_to 'New Book', new_book_path %>
+    <% end %>
 </div>
 
 <div class="col-md-2">
     <div class="jumbotron">
+      <p>Hi!</p>
+      <% if logged_in? and current_member.isAdmin? %>
             <%= link_to "Members List",   members_path %>
+      <% end %>
     </div>
 </div>
 
