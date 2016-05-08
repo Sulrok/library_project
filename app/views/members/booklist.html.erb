@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="text-center">
+    <h1>Booklist</h1>
+    </div>  
+      <table class ="table">
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+          </tr>
+          <% for book_id in @list %>
+              <% @book = Book.find(book_id) %>
+                <tr>
+                    <td><%= @book.title %></td>
+                    <td><%= @book.author %></td>
+                    <td><%= @book.isbn %></td>
+                </tr>
+          <% end %>
+      </table>
+  </div>
+</div>
+<%= link_to 'Back', members_path %>
