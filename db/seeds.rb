@@ -7,7 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Member.create!(name:  "Admin",
+             userName: "admin",
+             surrName: "admin",
+             addr1: "adminadminadminadmin",
+             addr2: "adminadminadmin",
+             tel: "1234567890",
              email: "admin@admin.com",
-             password:              "admin",
-             password_confirmation: "admin",
+             password:              "adminadmin",
+             password_confirmation: "adminadmin",
              isAdmin: true)

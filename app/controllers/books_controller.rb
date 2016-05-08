@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
-
+ 
   # GET /books
   # GET /books.json
   def index
@@ -22,14 +22,19 @@ class BooksController < ApplicationController
   end
   
   def list
-    @books = Book.all
+    if logged_in? and current_member.isAdmin?
+      @books = Book.all
+    else
+      @books = Book.getbooks
+    end
+    
     if params[:search]
       @books = @books.search(params[:search]).order("created_at DESC")
     else
-      @books = Book.all.order('created_at ASC')
+      @books = @books.order('created_at ASC')
     end
   end
-  
+
   def detail
     @book = Book.find(params[:id])
   end
