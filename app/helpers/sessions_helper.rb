@@ -10,7 +10,7 @@ module SessionsHelper
     @current_member ||= Member.find_by(id: session[:member_id])
   end
   
-    def logged_in?
+  def logged_in?
     !current_member.nil?
   end
   

@@ -10,7 +10,7 @@ class MembersController < ApplicationController
   # GET /members/1
   # GET /members/1.json
   def show
-    @user = Member.find(params[:id])
+    @member = Member.find(params[:id])
   end
 
   # GET /members/new
