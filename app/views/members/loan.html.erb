@@ -1,0 +1,20 @@
+<div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="text-center">
+    <h1>Loan a book to a member</h1>
+    </div>  
+      <table class ="table">
+          <tr>
+            <th>Username</th>
+          </tr>
+          <% @members.each do |member| %>
+            <tr>
+            <% if member.isActive == true %>
+              <td><%= member.userName %></td>
+              <td><%= link_to 'Choose' => "#" %></td>
+            <% end %>
+            </tr>
+          <% end %>
+      </table>
+  </div>
+</div>
