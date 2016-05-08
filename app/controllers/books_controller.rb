@@ -30,10 +30,8 @@ class BooksController < ApplicationController
     end
   end
   
-  # GET /books/1
-  # GET /books/1.json
   def detail
-    @book = Book.find(params[:bookID])
+    @book = Book.find(params[:id])
   end
   
   # POST /books
