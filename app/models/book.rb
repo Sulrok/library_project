@@ -10,7 +10,7 @@ class Book < ActiveRecord::Base
     end
     
     def self.getbooks()
-        where("isAvailable >= 0")
+        where("books.isAvailable >= 0")
     end
         
 end
