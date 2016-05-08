@@ -11,4 +11,5 @@ class Book < ActiveRecord::Base
     def self.getbooks()
         where("isAvailable >= 0")
     end
+        
 end

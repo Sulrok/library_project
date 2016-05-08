@@ -11,7 +11,7 @@
             <tr>
             <% if member.isActive == true %>
               <td><%= member.userName %></td>
-              <td><%= link_to 'Choose' => "#" %></td>
+              <td><%= link_to "Choose", choose_path(:id => @book.id, :memid => member.id), :method => :post %></td>
             <% end %>
             </tr>
           <% end %>

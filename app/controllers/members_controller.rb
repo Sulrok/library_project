@@ -27,6 +27,25 @@ class MembersController < ApplicationController
     @book = Book.find(params[:id])
     @members = Member.all
   end
+  
+  def choose
+    @book = Book.find(params[:id])
+    @member = Member.find(params[:memid])
+    @book.isAvailable = 1
+    @book.save
+    if @member.booklist
+      @str = @member.booklist
+      @str.concat(',')
+      @str.concat(@book.id)
+    else
+      @str = @book.id
+    end
+    respond_to do |format|
+      format.html { redirect_to list_path, notice: 'Book has been loan' }
+      format.json { head :no_content }
+    end
+
+  end
 
   # POST /members
   # POST /members.json
